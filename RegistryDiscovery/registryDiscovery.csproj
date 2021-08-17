@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>DLS.RegistryDiscovery</PackageId>
+    <Authors>DLS Team</Authors>
+    <Company>Intech Solutions Pty Ltd</Company>
+    <Product>DLS.RegistryDiscovery</Product>
+    <Copyright>Copyright 2021 Intech Solutions Pty Ltd</Copyright>
+    <PackageTags>DLS</PackageTags>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Intech-Solutions/DLS.RegistryDiscovery</RepositoryUrl>
+    <Description>A library that looks up the service address (a url) of an e-invoicing service provider that providers e-invoicing functions for the Business Participant.
+</Description>
+  </PropertyGroup>
+
+</Project>

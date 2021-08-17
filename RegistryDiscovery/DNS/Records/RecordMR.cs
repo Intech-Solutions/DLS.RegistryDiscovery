@@ -1,0 +1,54 @@
+#region Using Namespaces
+
+using System;
+
+#endregion
+
+#region RFC Info
+
+/*
+3.3.8. MR RDATA format (EXPERIMENTAL)
+
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    /                   NEWNAME                     /
+    /                                               /
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+where:
+
+NEWNAME         A <domain-name> which specifies a mailbox which is the
+                proper rename of the specified mailbox.
+
+MR records cause no additional section processing.  The main use for MR
+is as a forwarding entry for a user who has moved to a different
+mailbox.
+*/
+
+#endregion
+
+public class RecordMR : Record
+{
+    #region Public Members
+
+    public string NEWNAME;
+
+    #endregion
+
+    #region Constructors
+
+    public RecordMR(RecordReader rr)
+	{
+		NEWNAME = rr.ReadDomainName();
+	}
+
+    #endregion
+
+    #region Public Methods
+
+    public override string ToString()
+	{
+		return NEWNAME;
+	}
+
+    #endregion
+}
